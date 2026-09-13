@@ -1,0 +1,62 @@
+.contact {
+  position: relative;
+  width: 100%;
+  padding: 120px 24px 60px;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.contact-inner {
+  max-width: 600px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.contact-kicker {
+  display: block;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--teal);
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.contact-inner h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 16px;
+}
+
+.contact-inner p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.contact-loop {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 80px;
+  color: var(--teal);
+}
+
+.contact-footer {
+  text-align: center;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.contact-footer p {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.contact::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8rem;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+}

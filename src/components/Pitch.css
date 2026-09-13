@@ -1,0 +1,73 @@
+.pitch {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.pitch-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+.pitch-bg-text {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.08;
+  pointer-events: none;
+  color: var(--text);
+}
+
+.pitch-orbit {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.pitch-center-object {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 320px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.pitch-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  margin: -80px 0 0 -150px;
+  padding: 28px 30px;
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.pitch-kicker {
+  display: block;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--teal);
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
+.pitch-card h3 {
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  margin-bottom: 10px;
+}
+
+.pitch-card p {
+  color: var(--text-muted);
+  font-size: 13.5px;
+  line-height: 1.55;
+}

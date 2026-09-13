@@ -1,0 +1,174 @@
+.problem {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+/* ---------- AMBIENT BACKGROUND BURST ---------- */
+.problem-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.problem-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(circle at center, transparent 30%, var(--bg) 90%);
+  pointer-events: none;
+}
+
+/* ---------- HEADING ---------- */
+.problem-heading {
+  position: relative;
+  text-align: center;
+  max-width: 600px;
+  z-index: 5;
+  margin-bottom: 20px;
+}
+
+.problem-kicker {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.problem-heading h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 900px;
+  height: 65vh;
+  margin-top: 10px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, var(--teal), var(--violet));
+  opacity: 0.3;
+  box-shadow: 0 0 20px rgba(79, 227, 193, 0.15);
+}
+
+/* ---------- PARTICLE (proper visible comet) ---------- */
+.timeline-particle-core {
+  position: absolute;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-shadow:
+    0 0 16px 6px rgba(79, 227, 193, 0.95),
+    0 0 40px 16px rgba(79, 227, 193, 0.6),
+    0 0 80px 30px rgba(155, 107, 255, 0.35);
+  z-index: 6;
+  pointer-events: none;
+}
+
+.timeline-particle-glow {
+  position: absolute;
+  left: 50%;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(155, 107, 255, 0.45), transparent 70%);
+  filter: blur(14px);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ---------- CHECKPOINTS ---------- */
+.checkpoint {
+  position: absolute;
+  width: 42%;
+  transform: translateY(-50%);
+  opacity: 0;
+  z-index: 4;
+}
+
+.checkpoint-left {
+  left: 0;
+  transform: translate(-16px, -50%);
+}
+
+.checkpoint-right {
+  right: 0;
+  transform: translate(16px, -50%);
+}
+
+.checkpoint-dot {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 12px 4px rgba(79, 227, 193, 0.7);
+  transform: translateY(-50%);
+}
+
+.checkpoint-left .checkpoint-dot {
+  right: -21px;
+}
+
+.checkpoint-right .checkpoint-dot {
+  left: -21px;
+}
+
+/* ---------- GLASSMORPHISM (upgraded) ---------- */
+.glass-panel {
+  background: linear-gradient(
+    160deg,
+    rgba(231, 233, 242, 0.08),
+    rgba(231, 233, 242, 0.03)
+  );
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  border: 1px solid rgba(231, 233, 242, 0.14);
+  border-top-color: rgba(231, 233, 242, 0.24);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+}
+
+.checkpoint-text {
+  padding: 20px 24px;
+}
+
+.checkpoint-text h3 {
+  font-size: 16.5px;
+  margin-bottom: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.checkpoint-text p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}

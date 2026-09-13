@@ -1,0 +1,19 @@
+:root {
+  /* backgrounds */
+  --bg: #0A0C14;
+  --bg-alt: #10131F;
+  --bg-raised: #151928;
+
+  /* accent colors */
+  --teal: #4FE3C1;
+  --violet: #9B6BFF;
+
+  /* text */
+  --text: #E7E9F2;
+  --text-muted: #8890A6;
+  --text-dim: #5C6377;
+
+  /* borders */
+  --border: rgba(231, 233, 242, 0.09);
+  --border-strong: rgba(231, 233, 242, 0.16);
+}
