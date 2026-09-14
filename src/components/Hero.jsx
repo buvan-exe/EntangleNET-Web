@@ -89,7 +89,7 @@ function Hero() {
         <div className="hero-title-wrap" ref={titleWrapRef}>
           <StrokeText
                 text="EntangleNET"
-                strokeColor="#4FE3C1"
+                strokeColor="#37e6a6ff"
                 fillColor="url(#hero-title-gradient)"
                 strokeWidth={1.6}
                 drawDuration={1.6}
